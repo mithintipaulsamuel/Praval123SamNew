@@ -1,0 +1,44 @@
+<form  [formGroup]="registrationForm" (ngSubmit)="sendData()">
+    <div style="display: flex;flex-direction: row; justify-content: center;" >
+        <div >
+            <h1 class="mt-4">User Registration Form</h1>
+            <div class=" mt-4">
+                <input type="text" class="form-control"  formControlName="userName" placeholder="Codinghub">
+            </div>
+            <div class=" mt-4"  >
+                <input type="password" class="form-control" formControlName="password" placeholder="Password">
+            </div>
+            <div class=" mt-4" >
+                <input type="password" class="form-control" formControlName="ConfirmPassword" placeholder="ConfirmPassword">
+            </div>
+            <div class=" mt-4" >
+                <input type="text" class="form-control" formControlName="City" placeholder="City">
+            </div>
+            <div class=" mt-4" >
+                <input type="text" class="form-control" formControlName="State" placeholder="State">
+            </div>
+            <div class=" mt-4" >
+                <input type="text" class="form-control"  formControlName="pincode" placeholder="Pincode">
+            </div>
+            <input class="btn btn-primary mt-4" style="margin-left: 5px;" value="Register">
+            <button class="btn btn-danger mt-4" style="margin-left: 5px; ">Display</button>
+
+        </div>
+    </div>
+    <div>
+        {{registrationForm.value |json}}
+    </div> 
+</form>
+
+<mat-divider></mat-divider>
+<section>
+    <div class="example-label">Flat</div>
+    <div class="example-button-row">
+      <button mat-flat-button>Basic</button>
+      <button mat-flat-button color="primary">Primary</button>
+      <button mat-flat-button color="accent">Accent</button>
+      <button mat-flat-button color="warn">Warn</button>
+      <button mat-flat-button disabled>Disabled</button>
+      <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+  </section>

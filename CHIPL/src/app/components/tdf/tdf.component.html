@@ -1,0 +1,54 @@
+<b><p style="text-align: center; color: blue;font-size: 50px;margin: 50px; ">Registration Form</p></b>
+  <div class="container">
+    <form #RegistrationForm="ngForm" (ngSubmit)="submitDataForm(RegistrationForm)">
+        <div class="row">
+            <div class="col-6">
+                <div class="mb-3">
+                    <input type="text" class="form-control"  placeholder="Enter your name" name="userName" [(ngModel)]="user.userName" #userName="ngModel"  [class.is-invalid]="userName.touched && userName.invalid" required >
+                    <small class="text-danger" [class.d-none]="userName.valid ||userName.untouched">user name is required</small>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control"  placeholder="Enter your email-id"  name="mailId" [(ngModel)]="user.email" #mailId="ngModel" [class.is-invalid]="mailId.invalid"  required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="tel" class="form-control"  placeholder="Enter your mobile number"  name="mobileNum" ngModel>
+                  </div>
+<!-- <input type="submit">     -->
+<button class="btn btn-primary" [disabled]="RegistrationForm.invalid">Register</button>
+            </div >
+            <div class="col-6">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" name="gender" ngModel>
+                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" name="gender" ngModel>
+                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                  </div>
+    
+               <div class="mt-4">
+                <select class="form-select" aria-label="Default select example" name="course" ngModel >
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+               </div>
+               <div class="mt-4">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" name="remember" ngModel >
+                    <label class="form-check-label" for="inlineCheckbox1">Remember me</label>
+                  </div> 
+               </div>
+            </div>
+            
+        </div>
+    </form>
+    <div style="text-align: center; color: blue;">
+        {{RegistrationForm.value | json }}
+    </div>
+    <div style="text-align: center; color: blue;">
+      {{user | json }}
+  </div>
+  </div>
+   

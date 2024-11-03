@@ -1,0 +1,18 @@
+<p>coursedetails works!</p>
+<table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">Course_Id</th>
+        <th scope="col">Course_Name</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ele of emp">
+        <td>{{ele.c_id}}</td>
+        <td>{{ele.c_name}}</td>
+        <td>{{ele.Amount}}</td>
+      </tr>
+
+    </tbody>
+  </table>

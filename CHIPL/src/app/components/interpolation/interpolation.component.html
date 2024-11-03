@@ -1,0 +1,33 @@
+<!-- <p>interpolation works!</p> -->
+
+<h1>My Name is :  {{name}}</h1>
+<h1>My Name Length is :{{name.length}}</h1>
+<h1>My name in Upper Case : {{name.toUpperCase()}}</h1>
+<h1>My name in Lower Case : {{name.toLowerCase()}}</h1>
+<h1>My name from method :{{getMyName()}}</h1>
+<br><br>
+{{emp.stdname}}
+<br>
+{{emp.age}}
+<br>
+{{emp.age>10}}
+<br>
+{{name}}
+<br>
+<p>{{emp.age+10}}</p>
+<br>
+<h1>Sum =:{{2+3+4+5+6}}</h1>
+<br>
+<h4>{{emp.lname?emp.lname:"There is no last name"}}</h4>
+<h4>{{emp.fname?emp.fname:"There is no first name"}}</h4>
+<br>
+{{data | json}}
+<br>
+{{data[1].name}}
+<br>
+{{data[0] | json}}
+<br>
+<img src={{imgUrl}}>
+<br>
+<img src={{newImg}} width="1100" height="1100">
+<h1>{{newname}}</h1>

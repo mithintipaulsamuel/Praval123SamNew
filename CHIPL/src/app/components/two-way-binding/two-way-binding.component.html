@@ -1,0 +1,17 @@
+<p>two-way-binding works!</p>
+<h3>Tow way data Binding</h3>
+<input type="text" placeholder="Enter your name" #name>
+<button class="btn btn-danger" (click)="sendClick(name)" >Submit</button>
+
+<p>Your name is:{{value}}</p>
+
+<br>
+<br>
+<input type="text" placeholder="Enter your name" [(ngModel)]="userName">
+<p>Your name is:{{userName}}</p>
+<p>------------------------</p>
+
+<br>
+<br>
+<input type="text" placeholder="enter ur full name" [(ngModel)]="newvar">
+<p>Your name full name is:{{newvar}}</p>

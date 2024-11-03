@@ -1,0 +1,20 @@
+<p>course works!</p>
+
+<table class="table" >
+    <thead>
+      <tr>
+        <th scope="col">Course_Id</th>
+        <th scope="col">Course_Name</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ele of emp">        <span (click)="selecteddata(ele.c_id)">
+        <td>{{ele.c_id}}</td>
+        <td>{{ele.c_name}}</td>
+        <td>{{ele.Amount}}</td>  </span>
+
+      </tr>
+  
+    </tbody>
+  </table>

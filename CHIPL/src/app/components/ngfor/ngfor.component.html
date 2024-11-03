@@ -1,0 +1,35 @@
+<!-- <p>ngfor works!</p>
+<h2 *ngFor="let ar1 of ar">{{ar1}}</h2>
+<br>
+<p>Indexes of elements</p>
+<h2 *ngFor="let ar1 of ar; index as i">Value:{{ar1}}==> Index:{{i}}</h2>
+<br>
+<p>Even Elements</p>
+<h2 *ngFor="let ar1 of ar;even as e"><span *ngIf="e">{{ar1}}==>Even Position:{{e}}</span></h2>
+<br>
+<p>Odd Elements</p>
+<h2 *ngFor="let ar1 of ar;odd as o"><span *ngIf="o">{{ar1}}==>Odd Position:{{o}}</span></h2>
+<br>
+<h2 *ngFor="let ar1 of emp | keyvalue">{{ar1.key}}==>{{ar1.value | json}}</h2> 
+<br> -->
+<!-- <h2 *ngFor="let ele of emp">{{ele.id}}
+    {{ele.name}}
+    {{ele.age}}</h2> -->
+
+    <table class="table" >
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ele of emp">
+            <td>{{ele.id}}</td>
+            <td>{{ele.name}}</td>
+            <td>{{ele.age}}</td>
+          </tr>
+
+        </tbody>
+      </table>
